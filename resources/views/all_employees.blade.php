@@ -22,17 +22,25 @@
     </head>
     <body class="antialiased">
         <div class="flex-center position-ref full-height">
-           <div class="content">
-                <p>Employee Id: {{$employee->employee_id}} </p>
-                <p>Employee Name: {{$employee->first_name}} </p>
-                <p>Job Title: {{$employee->job_title}} </p>
-                <p>Salary: {{$employee->salary}} </p>
+           <div class="content" style="background-color: white; padding:60px;">
+             
+               @foreach($employees as $key => $value)
+
+               <div style="color:blue; display:flex; flex-direction:column; padding:12px; background-color:#e2e8f0; max-width:600px; margin:10px">
+                   <h1>{{$value->first_name}}</h1>
+                   <h3> <span>Employee Id: </span> {{$value->employee_id}}</h3>
+                   <h3> <span>Job Title: </span>{{$value->job_title}}</h3>
+                   <h3> <span>Salary: </span>{{$value->salary}}</h3>
+               </div>
+                  
+               @endforeach
+                
            </div>
 
            <div class="flex-center position-ref full-height">
             <div class="content">
                <ul>
-                 <li> <a href="/employees">All Employees</a> </li>
+                 {{-- <li> <a href="">Pizza Index</a> </li> --}}
                  <li><a href="/">Back To Links</a></li>
                </ul>
             </div>

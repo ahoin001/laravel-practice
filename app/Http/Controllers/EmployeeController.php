@@ -15,6 +15,12 @@ class EmployeeController extends Controller
      * @return \Illuminate\Http\Response
      */
 
+    public function allEmployees() {
+        $employees = DB::select('SELECT * FROM employees');
+      
+        return view('all_employees',["employees"=>$employees]);
+    }
+
     public function uniqueEmployee()
     {
         // $employee = DB::statement('SELECT * FROM employees WHERE employee_id = 33391');
@@ -23,7 +29,7 @@ class EmployeeController extends Controller
         'SELECT * 
         FROM employees 
         WHERE employee_id = 33391');
-
+        // dd($result);
         $employee = $result[0];
         
         return view('employee_record',["employee"=>$employee]);

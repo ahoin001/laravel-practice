@@ -17,11 +17,14 @@ use App\Http\Controllers\EmployeeController;
 Route::get('/', function () {
     return view('welcome');
 });
-Route::get('/withdb', [PizzaController::class, 'index'] );
-
-Route::redirect('/here', '/pizzas', 301);
 
 Route::get('/employee',[EmployeeController::class, 'uniqueEmployee']);
+
+Route::get('/employees',[EmployeeController::class, 'allEmployees']);
+
+Route::get('employee/create', function ($id) {
+    // return view('')
+});
 
 Route::get('/pizzas', function () {
 
@@ -41,3 +44,4 @@ Route::get('/pizzas/{pizza_name}', function ($pizza_name) {
 
     return view('pizzas',$pizza);
 })->name('mypizza');
+
