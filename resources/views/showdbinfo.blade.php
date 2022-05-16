@@ -23,9 +23,9 @@
     <body class="antialiased">
         <div class="flex-center position-ref full-height">
            <div class="content">
-                @php
-                    var_dump($employees);
-                @endphp
+             @foreach ($employees as $employee)
+             "Employee_id: " . $row["employee_id"]. " - Name: " . $row["first_name"]. " - Job " . $row["job_title"]. " -Salary" . $row["salary"] . "<br>";
+             @endforeach
            </div>
 
            <div class="flex-center position-ref full-height">

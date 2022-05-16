@@ -23,28 +23,17 @@
     <body class="antialiased">
         <div class="flex-center position-ref full-height">
            <div class="content">
-               <div class="title m-b-md">
-                   Pizza Page
-               </div>
-               <p>{{$type}} - {{$base}}</p>
-               @if ($price > 15)
-                   <p>This pizza is expensive! ${{$price}} is alot for a pizza! </p>
-                   @elseif($price < 10)
-                   <p>${{$price}} is a cheap price for some pizza!</p>
-                   @else
-                   <p>Well, {{$price}} is normall priced I believe</p>
-               @endif
-               @if($pizza_name != '')
-               <p>Wait a minute! I asked for {{$pizza_name}}! </p>
-               @else
-               <p>This is what I wanted! </p>
-               @endif
+                <p>Employee Id: {{$employee->employee_id}} </p>
+                <p>Employee Name: {{$employee->first_name}} </p>
+                <p>Job Title: {{$employee->job_title}} </p>
+                <p>Salary: {{$employee->salary}} </p>
+
            </div>
 
            <div class="flex-center position-ref full-height">
             <div class="content">
                <ul>
-                 <li> <a href="/employee">Employee Page</a> </li>
+                 {{-- <li> <a href="">Pizza Index</a> </li> --}}
                  <li><a href="/">Back To Links</a></li>
                </ul>
             </div>

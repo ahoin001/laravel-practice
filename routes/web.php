@@ -2,6 +2,7 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\PizzaController;
+use App\Http\Controllers\EmployeeController;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -19,6 +20,8 @@ Route::get('/', function () {
 Route::get('/withdb', [PizzaController::class, 'index'] );
 
 Route::redirect('/here', '/pizzas', 301);
+
+Route::get('/employee',[EmployeeController::class, 'uniqueEmployee']);
 
 Route::get('/pizzas', function () {
 
