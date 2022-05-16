@@ -21,18 +21,27 @@ class EmployeeController extends Controller
         return view('all_employees',["employees"=>$employees]);
     }
 
-    public function uniqueEmployee()
+    public function uniqueEmployee($employeeId)
     {
-        // $employee = DB::statement('SELECT * FROM employees WHERE employee_id = 33391');
 
-        $result = DB::select(
-        'SELECT * 
-        FROM employees 
-        WHERE employee_id = 33391');
-        // dd($result);
-        $employee = $result[0];
+        // $searchedEmployee = DB::findOrFail($employeeId);
+       
+
+        $searchForEmployeeResult = DB::table('employees')
+                                    ->where('employee_id', '=' , $employeeId)
+                                    ->get();
+
+        //  dd($searchForEmployeeResult[0]);
+
+        // ? Should I do raw SQL queries or use QueryBuilder?
+        // DB::select(
+        // 'SELECT * 
+        // FROM employees 
+        // WHERE employee_id = $employeeId');
         
-        return view('employee_record',["employee"=>$employee]);
+        $searchedEmployee = $searchForEmployeeResult[0];
+
+        return view('employee_record',["employee"=>$searchedEmployee]);
     }
 
 }
