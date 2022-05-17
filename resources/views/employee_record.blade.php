@@ -86,7 +86,7 @@
                 </div>
                 
                <h3> <a href="/employees" style="color:white; text-decoration:underline">Back To All Employees</a></h3>
-                <h3><a href="/employees" style="color:white; text-decoration:underline">Back To Home Page</a></h3>
+                <h3><a href="/" style="color:white; text-decoration:underline">Back To Home Page</a></h3>
 
               
             </div>

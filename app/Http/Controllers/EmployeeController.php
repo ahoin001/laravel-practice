@@ -21,24 +21,35 @@ class EmployeeController extends Controller
         return view('all_employees',["employees"=>$employees]);
     }
 
+    public function createEmployee() {
+
+        $firstName = request('first_name');
+        $lastName = request('last_name');
+        $jobTitle = request('job_title');
+        $salary = request('salary');
+
+        error_log(request('first_name'));
+        error_log(request('last_name'));
+        error_log(request('job_title'));
+        error_log(request('salary'));
+
+        DB::insert('INSERT into empployees 
+                    (employee_id, first_name,last_name,job_title,salary,reports_to,office_id) 
+                    VALUES (DEFAULT,?, ?,?,?,?,?)', 
+                    [$firstName,$lastName,$jobTitle,$salary,37270,1]);
+
+        return view('welcome');
+    }
+
     public function uniqueEmployee($employeeId)
     {
-
-        // $searchedEmployee = DB::findOrFail($employeeId);
-       
 
         $searchForEmployeeResult = DB::table('employees')
                                     ->where('employee_id', '=' , $employeeId)
                                     ->get();
 
         //  dd($searchForEmployeeResult[0]);
-
-        // ? Should I do raw SQL queries or use QueryBuilder?
-        // DB::select(
-        // 'SELECT * 
-        // FROM employees 
-        // WHERE employee_id = $employeeId');
-        
+ 
         $searchedEmployee = $searchForEmployeeResult[0];
 
         return view('employee_record',["employee"=>$searchedEmployee]);

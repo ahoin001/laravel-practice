@@ -48,26 +48,18 @@
                 <div class="mt-8 bg-white dark:bg-gray-800 overflow-hidden shadow sm:rounded-lg">
                     <div class="grid grid-cols-1 md:grid-cols-2">
                         <div class="p-6">
-                            <div class="flex items-center">
-                                <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewBox="0 0 24 24" class="w-8 h-8 text-gray-500"><path d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253"></path></svg>
-                                <div class="ml-4 text-lg leading-7 font-semibold">
-                        
-                                      <a class="underline text-gray-900 dark:text-white" href="{{route('favoritepizza',['pizza_type'=>'Meatlovers'])}}">Order Meatlovers Pizza</a>
-                                 
-                                </div>
-
-                            <div class="ml-12">
-                                <div class="mt-2 text-gray-600 dark:text-gray-400 text-sm">
-                                   Link has a req param of meatlovers being passed to route. This will be used to display that pizza name dynamically in the linked page
-                                </div>
-                            </div>
-                        </div>
 
                         <div class="p-6 border-t border-gray-200 dark:border-gray-700 md:border-t-0 md:border-l">
                             <div class="flex items-center">
-                                <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewBox="0 0 24 24" class="w-8 h-8 text-gray-500"><path d="M3 9a2 2 0 012-2h.93a2 2 0 001.664-.89l.812-1.22A2 2 0 0110.07 4h3.86a2 2 0 011.664.89l.812 1.22A2 2 0 0018.07 7H19a2 2 0 012 2v9a2 2 0 01-2 2H5a2 2 0 01-2-2V9z"></path><path d="M15 13a3 3 0 11-6 0 3 3 0 016 0z"></path></svg>
+                            
+                                <svg xmlns="http://www.w3.org/2000/svg" width="24px" height="24px" viewBox="0 0 24 24" fill="white">
+                                    <circle cx="12" cy="7" r="5" stroke="black" stroke-width="2"/>
+                                    <path d="M17 14H17.3517C18.8646 14 20.1408 15.1266 20.3285 16.6279L20.719 19.7519C20.8682 20.9456 19.9374 22 18.7344 22H5.26556C4.06257 22 3.1318 20.9456 3.28101 19.7519L3.67151 16.6279C3.85917 15.1266 5.13538 14 6.64835 14H7" stroke="black" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                </svg>
+                                
                                 <div class="ml-4 text-lg leading-7 font-semibold">
-                                    <a href="" class="underline text-gray-900 dark:text-white">Add an Employee</a>
+                                    {{-- <a href="{{route('newEmployee')}}" class="underline text-gray-900 dark:text-white">Add an Employee</a> --}}
+                                    <a href="{{ route('newEmployee') }}" class="underline text-gray-900 dark:text-white">Add an Employee</a>
                                 </div>
                             </div>
 
@@ -80,8 +72,11 @@
 
                         <div class="p-6 border-t border-gray-200 dark:border-gray-700 md:border-t-0 md:border-l">
                             <div class="flex items-center">
-                                <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewBox="0 0 24 24" class="w-8 h-8 text-gray-500"><path d="M3 9a2 2 0 012-2h.93a2 2 0 001.664-.89l.812-1.22A2 2 0 0110.07 4h3.86a2 2 0 011.664.89l.812 1.22A2 2 0 0018.07 7H19a2 2 0 012 2v9a2 2 0 01-2 2H5a2 2 0 01-2-2V9z"></path><path d="M15 13a3 3 0 11-6 0 3 3 0 016 0z"></path></svg>
-                                <div class="ml-4 text-lg leading-7 font-semibold">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="24px" height="24px" viewBox="0 0 24 24" fill="white">
+                                    <path d="M.221 16.268a15.064 15.064 0 0 0 1.789 1.9C2.008 18.111 2 18.057 2 18a5.029 5.029 0 0 1 3.233-4.678 1 1 0 0 0 .175-1.784A2.968 2.968 0 0 1 4 9a2.988 2.988 0 0 1 5.022-2.2 5.951 5.951 0 0 1 2.022-.715 4.994 4.994 0 1 0-7.913 6.085 7.07 7.07 0 0 0-2.91 4.098zM23.779 16.268a7.07 7.07 0 0 0-2.91-4.1 4.994 4.994 0 1 0-7.913-6.086 5.949 5.949 0 0 1 2.022.715 2.993 2.993 0 1 1 3.614 4.74 1 1 0 0 0 .175 1.784A5.029 5.029 0 0 1 22 18c0 .057-.008.111-.01.167a15.065 15.065 0 0 0 1.789-1.899z"/>
+                                    <path d="M18.954 20.284a7.051 7.051 0 0 0-3.085-5.114A4.956 4.956 0 0 0 17 12a5 5 0 1 0-8.869 3.17 7.051 7.051 0 0 0-3.085 5.114 14.923 14.923 0 0 0 1.968.849C7.012 21.088 7 21.046 7 21a5.031 5.031 0 0 1 3.233-4.678 1 1 0 0 0 .175-1.785A2.964 2.964 0 0 1 9 12a3 3 0 1 1 6 0 2.964 2.964 0 0 1-1.408 2.537 1 1 0 0 0 .175 1.785A5.031 5.031 0 0 1 17 21c0 .046-.012.088-.013.133a14.919 14.919 0 0 0 1.967-.849z"/>
+                                </svg>
+                                 <div class="ml-4 text-lg leading-7 font-semibold">
                                     <a href="/employees" class="underline text-gray-900 dark:text-white">Page Of All Employees In Database</a>
                                 </div>
                             </div>

@@ -48,7 +48,9 @@
                    <h3> <span>Employee Id: </span> {{$value->employee_id}}</h3>
                    <h3> <span>Job Title: </span>{{$value->job_title}}</h3>
                    <h3> <span>Salary: </span>{{$value->salary}}</h3>
-                   <a href="/employee/{{$value->employee_id}}" style="text-decoration: underline;">Click Here For More Details on Employee</a>
+                   
+                   <a href="{{ route('employeeDetails',['employeeId'=>$value->employee_id]) }}" style="text-decoration: underline;">Click Here For More Details on Employee</a>
+                   {{-- <a href="/employee/{{$value->employee_id}}" style="text-decoration: underline;">Click Here For More Details on Employee</a> --}}
                </div>
                   
                @endforeach
