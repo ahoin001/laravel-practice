@@ -50,7 +50,7 @@
                    <h3> <span>Salary: </span>${{$value->salary}}</h3>
 
                   
-                 <form action="{{ route('deleteEmployee',['employeeId'=>$value->employee_id]) }}" method="POST">
+                 <form action="{{ route('deleteEmployee',['employeeId'=>$value->employee_id]) }}" method="POST" style="margin: 0 auto">
                 @csrf
                 @method('DELETE')
 
