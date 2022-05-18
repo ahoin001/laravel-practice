@@ -47,7 +47,7 @@
                    <h1>{{$value->first_name}}</h1>
                    <h3> <span>Employee Id: </span> {{$value->employee_id}}</h3>
                    <h3> <span>Job Title: </span>{{$value->job_title}}</h3>
-                   <h3> <span>Salary: </span>{{$value->salary}}</h3>
+                   <h3> <span>Salary: </span>${{$value->salary}}</h3>
 
                   
                  <form action="{{ route('deleteEmployee',['employeeId'=>$value->employee_id]) }}" method="POST" style="margin: 0 auto">
