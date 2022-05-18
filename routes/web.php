@@ -33,11 +33,6 @@ Route::delete('employee/delete/{employeeId}',[EmployeeController::class,'destroy
 
 Route::post('employee/insertEmployee',[EmployeeController::class, 'createEmployee']);
 
-<<<<<<< HEAD
 Route::delete('employee/delete/{employeeId}',[EmployeeController::class,'destroy'] )->name('deleteEmployee');
 
 Route::put('employees/updateEmployee/{employeeId}',[EmployeeController::class,'updateEmployee'])->name('modifyEmployee');
-=======
-
->>>>>>> parent of 9f48767 (Added form and route to update employee info)
-
