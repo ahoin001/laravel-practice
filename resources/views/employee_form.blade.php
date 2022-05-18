@@ -55,12 +55,11 @@
                                     <label style="color: white" for="salary">Salary: </label>
                                     <input type="text" name="salary" id="salary">
 
-                                    <input type="submit" value="Add Employee">
+                                    <input type="submit" value="Add Employee" style="cursor:pointer; padding:12px; background-color:#09be40; color:white; font-weight:bold; text-align:center; width:180px; margin: 20px auto ">
                                 </form>
-
+                                   
                             </div>
                             
-
                         </div>
                     </div>
                 </div>

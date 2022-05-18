@@ -54,7 +54,7 @@
                 @csrf
                 @method('DELETE')
 
-                <button style="cursor:pointer; padding:8px; background-color:#ef3c2d; color:white; font-weight:bold; text-align:center; width:180px; margin: 20px auto ">Delete Employee</button>
+                <button style="cursor:pointer; padding:12px; background-color:#ef3c2d; color:white; font-weight:bold; text-align:center; width:180px; margin: 20px auto ">Delete Employee</button>
 
                 </form>
 
