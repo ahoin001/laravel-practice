@@ -21,26 +21,27 @@ class EmployeeController extends Controller
         return view('all_employees',["employees"=>$employees]);
     }
 
+    public function destroy($employeeId)
+    {
+       $result = DB::delete('DELETE FROM employees WHERE employee_id = ?', [$employeeId]);
+       return view('/welcome');
+    }
+
     public function createEmployee() {
 
         $firstName = request('first_name');
         $lastName = request('last_name');
         $jobTitle = request('job_title');
-        $salary = floatval(request('salary'));
-
-        error_log(request('first_name'));
-        error_log(request('last_name'));
-        error_log(request('job_title'));
-        error_log(request('salary'));
+        $salary = strVal(request('salary'));
 
         // ? Query Builder way, but I like making raw queries also
         $id = DB::table('employees')->insert(
-            ['employee_id'=>1, 'first_name' => $firstName, 'last_name' => $lastName, 
+            ['employee_id'=>22, 'first_name' => $firstName, 'last_name' => $lastName, 
             'job_title'=>$jobTitle,'salary'=>$salary,'reports_to'=>37270,
             'office_id'=>1]
         );
 
-        return view('welcome');
+        return view('/welcome');
     }
 
     public function uniqueEmployee($employeeId)

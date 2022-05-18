@@ -29,6 +29,8 @@ Route::get('employee/create',function(){
     return view('employee_form');
 } )->name('newEmployee');
 
+Route::delete('employee/delete/{employeeId}',[EmployeeController::class,'destroy'] )->name('deleteEmployee');
+
 Route::post('employee/insertEmployee',[EmployeeController::class, 'createEmployee']);
 
 
