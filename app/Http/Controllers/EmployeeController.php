@@ -21,6 +21,7 @@ class EmployeeController extends Controller
         return view('all_employees',["employees"=>$employees]);
     }
 
+
     public function destroy($employeeId)
     {
        $result = DB::delete('DELETE FROM employees WHERE employee_id = ?', [$employeeId]);
@@ -37,10 +38,28 @@ class EmployeeController extends Controller
 
         // ? Query Builder way, but I like making raw queries also
         $id = DB::table('employees')->insert(
-            ['employee_id'=>22, 'first_name' => $firstName, 'last_name' => $lastName, 
+            ['first_name' => $firstName, 'last_name' => $lastName, 
             'job_title'=>$jobTitle,'salary'=>$salary,'reports_to'=>37270,
             'office_id'=>1]
         );
+
+        return view('/welcome');
+    }
+
+    public function updateEmployee($employeeId)
+    {
+         // * Implement Eloquent ORM for more simple way to do this
+         $firstName = request('first_name');
+         $lastName = request('last_name');
+         $jobTitle = request('job_title');
+         $salary = strVal(request('salary'));
+
+        $result = DB::table('employees')
+                  ->where('employee_id', $employeeId)
+                  ->update(['first_name' => $firstName,
+                            'last_name' => $lastName,
+                            'job_title' => $jobTitle,
+                            'salary' => $salary]);
 
         return view('/welcome');
     }
@@ -67,22 +86,6 @@ class EmployeeController extends Controller
         return view('employee_update_form',['employee'=>$searchForEmployeeResult[0]]);
     }
 
-    public function updateEmployee($employeeId)
-    {
-         // * Implement Eloquent ORM for more simple way to do this
-         $firstName = request('first_name');
-         $lastName = request('last_name');
-         $jobTitle = request('job_title');
-         $salary = strVal(request('salary'));
-
-        $result = DB::table('employees')
-                  ->where('employee_id', $employeeId)
-                  ->update(['first_name' => $firstName,
-                            'last_name' => $lastName,
-                            'job_title' => $jobTitle,
-                            'salary' => $salary]);
-
-        return view('/welcome');
-    }
+   
 
 }
