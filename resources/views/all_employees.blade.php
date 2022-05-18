@@ -50,18 +50,15 @@
                    <h3> <span>Salary: </span>{{$value->salary}}</h3>
 
                   
-                 <form action="{{ route('deleteEmployee',['employeeId'=>$value->employee_id]) }}" method="POST" style="margin: 0 auto">
+                 <form action="{{ route('deleteEmployee',['employeeId'=>$value->employee_id]) }}" method="POST">
                 @csrf
                 @method('DELETE')
 
-                <button style="cursor:pointer; padding:12px; background-color:#ef3c2d; color:white; font-weight:bold; text-align:center; width:180px; margin: 20px auto ">Delete Employee</button>
+                <button style="cursor:pointer; padding:8px; background-color:#ef3c2d; color:white; font-weight:bold; text-align:center; width:180px; margin: 20px auto ">Delete Employee</button>
 
                 </form>
-                  
-                  <a href="{{ route('editEmployeeInfo',['employeeId'=>$value->employee_id]) }}" style="cursor:pointer; padding:8px; background-color:#008cba; color:white; font-weight:bold; text-align:center; width:180px; margin: 20px auto ">Edit Employee Info</a>
-
-                  <a href="{{ route('employeeDetails',['employeeId'=>$value->employee_id]) }}" style="text-decoration: underline;">Click Here For More Details on Employee</a>
-
+                   <a href="{{ route('employeeDetails',['employeeId'=>$value->employee_id]) }}" style="text-decoration: underline;">Click Here For More Details on Employee</a>
+                 
                    {{-- <a href="{{ route('deleteEmployee',['employeeId'=>$value->employee_id]) }}" >Delete Employee</a> --}}
                    {{-- <a href="/employee/{{$value->employee_id}}" style="text-decoration: underline;">Click Here For More Details on Employee</a> --}}
                </div>

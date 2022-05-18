@@ -29,7 +29,6 @@ class EmployeeController extends Controller
 
     public function createEmployee() {
 
-        // * Implement Eloquent ORM for more simple way to do this
         $firstName = request('first_name');
         $lastName = request('last_name');
         $jobTitle = request('job_title');
@@ -57,32 +56,6 @@ class EmployeeController extends Controller
         $searchedEmployee = $searchForEmployeeResult[0];
 
         return view('employee_record',["employee"=>$searchedEmployee]);
-    }
-
-    public function getEmployeeForEdit ($employeeId){
-        $searchForEmployeeResult = DB::table('employees')
-        ->where('employee_id', '=' , $employeeId)
-        ->get();
-        //   dd($searchForEmployeeResult[0]);
-        return view('employee_update_form',['employee'=>$searchForEmployeeResult[0]]);
-    }
-
-    public function updateEmployee($employeeId)
-    {
-         // * Implement Eloquent ORM for more simple way to do this
-         $firstName = request('first_name');
-         $lastName = request('last_name');
-         $jobTitle = request('job_title');
-         $salary = strVal(request('salary'));
-
-        $result = DB::table('employees')
-                  ->where('employee_id', $employeeId)
-                  ->update(['first_name' => $firstName,
-                            'last_name' => $lastName,
-                            'job_title' => $jobTitle,
-                            'salary' => $salary]);
-
-        return view('/welcome');
     }
 
 }
