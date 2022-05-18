@@ -10,9 +10,7 @@ class EmployeeController extends Controller
 {
 
      /**
-     * Show a list of all of the application's users.
-     *
-     * @return \Illuminate\Http\Response
+     * Show a list of all of the application's employees
      */
 
     public function allEmployees() {
