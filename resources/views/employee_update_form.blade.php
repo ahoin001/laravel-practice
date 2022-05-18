@@ -58,18 +58,18 @@
 
                                     @csrf
                                     @method('PUT')
-                                    
+
                                     <label style="color: white" for="firstName">First Name: </label>
-                                    <input type="text" name="first_name" id="first_name" placeholder="{{$employee-> first_name}}">
+                                    <input type="text" name="first_name" id="first_name" value="{{$employee-> first_name}}">
 
                                     <label style="color: white" for="lastName">Last Name: </label>
-                                    <input type="text" name="last_name" id="last_name" placeholder="{{$employee-> last_name}}">
+                                    <input type="text" name="last_name" id="last_name" value="{{$employee-> last_name}}">
 
                                     <label style="color: white" for="jobTitle">Job Title: </label>
-                                    <input type="text" name="job_title" id="job_title" placeholder="{{$employee-> job_title}}">
+                                    <input type="text" name="job_title" id="job_title" value="{{$employee-> job_title}}">
 
                                     <label style="color: white" for="salary">Salary: </label>
-                                    <input type="text" name="salary" id="salary"  placeholder="{{$employee-> salary}}">
+                                    <input type="text" name="salary" id="salary"  value="{{$employee-> salary}}">
 
                                     <input type="submit" value="Update Employee" style="cursor:pointer; padding:12px; background-color:#09be40; color:white; font-weight:bold; text-align:center; width:180px; margin: 20px auto ">
                                 </form>
