@@ -18,8 +18,6 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-
-
 Route::get('/employees',[EmployeeController::class, 'allEmployees']);
 
 // * Will give rout parameter to controller to use
