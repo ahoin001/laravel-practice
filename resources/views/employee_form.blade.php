@@ -58,6 +58,8 @@
                                     <input type="submit" value="Add Employee" style="cursor:pointer; padding:12px; background-color:#09be40; color:white; font-weight:bold; text-align:center; width:180px; margin: 20px auto ">
                                 </form>
                                    
+                                <p style="text-align:center;"><a href="/" style=" text-decoration: underline; color:white">Click Here To Go Home</a></p>  
+
                             </div>
                             
                         </div>
