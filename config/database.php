@@ -2,6 +2,8 @@
 
 use Illuminate\Support\Str;
 
+$DATABASE_URL = parse_url('mysql://bd124f6dccb30d:681f7cef@us-cdbr-east-05.cleardb.net/heroku_35c236c0d2453c1?reconnect=true');
+
 return [
 
     /*

@@ -37,5 +37,3 @@ Route::delete('employee/delete/{employeeId}',[EmployeeController::class,'destroy
 
 Route::put('employees/updateEmployee/{employeeId}',[EmployeeController::class,'updateEmployee'])->name('modifyEmployee');
 
-
-
